@@ -6,7 +6,8 @@
 Create a new application, make sure you select the one that says `web application`.  
 
 ![webapp](image/webapp.png)
-
   
-
+  
+Chose template as MVC, Web API is super awesome to look into and decouples from front end (focuses on just back end stuff. ).  
+  
   
