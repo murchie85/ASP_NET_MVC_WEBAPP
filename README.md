@@ -3,6 +3,10 @@
 
 ![image](https://miro.medium.com/max/638/1*fdmEnFOCH8oDVo8mlQG2jg.jpeg)
 
+## NOTES 
+
+Big difference between selecting ASP .NET Framework web and ASP .NET Core web.  
+Core gives you the ability to render based on Development or production! More [here](https://www.youtube.com/watch?v=79UWvR734wI)   
 Controller -> Model(Classes) -> views (html/css), Internet information server. For hosting.  
 Hosted on IS express or slim down version on your machine.  
 HTML can be changed dynamically.  
@@ -141,6 +145,23 @@ namespace MVCDemo.Models
 }
 
 ```
+
+## ROUTES  
+  
+Can be found in the `App_Start` folder.  Which should have `BundleConfig.cs` , `FilterConfig.cs` and `RouteConfig.cs`. 
+When using .NET Core this will be different. 
+Instead mines is in the `startup.cs` code 
+
+```
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+```
+Which is very different from the setup in RouteConfig.cs it will specify a default in routes. 
 
 ## STARTING UP   
 
